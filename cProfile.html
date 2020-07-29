@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile Page</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/lumen/bootstrap.min.css">
+    <link href="c.css" rel="stylesheet">
+</head>
+
+<body id="">
+    <nav class="navbar navbar-default">
+      <div class="container-fluid">
+        <h1 class="memberName">Welcome Ann-Marie...</h1>
+        <div class="navbar-header">
+          <a class="navbar-brand" href="cHome.html">
+            <i class="fas fa-sign-out-alt"></i> Logout
+          </a>
+        </div>
+      </div>
+    </nav>
+  
+    <div class="container">
+      <div class="row">
+  
+        <!------------------Saved Searches and User work - Main Left Div------------------>
+        <div class="userSaved col-md-4 col-sm-12">
+  
+  
+          <div class="card bg-light mb-6">
+            <div class="card-header">
+              <h3>Saved Books</h3>
+            </div>
+            <div class="card-body overflow-auto">
+              <div class="savedBooks">
+                <div class="savedBooksList">
+                  <ul class="user-saved-books">
+  
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+  
+          
+        <!--------------Book Search & Publish - Main Right Div--------------->
+        
+        <div class="mainBookSearch overflow-auto col-md-7 col-sm-12">
+          <h2>Find books with just one search! <span class="member-name"></span></h2>
+          <hr>
+       
+          <form class="member-list">
+  
+          </form>
+  
+         
+          <hr>
+          <label for="basic-url">
+            <h5>Search for Books below!</h5>
+          </label>
+          <div class="input-group mb-3">
+            <div class="new-book-section">
+                <h5>Search by Title:</h5>
+                <div id="addAlert"></div>
+                <input type="text" id="book-name">
+                <button class="btn-primary add-new">Search</button>
+              </div>
+          </div>
+  
+          <div class="input-group mb-3">
+            <div class="new-book-section">
+                <h5>Search by Author:</h5>
+                <div id="addAlert"></div>
+                <input type="text" id="book-name">
+                <button class="btn-primary add-new">Search</button>
+              </div>
+          </div>
+  
+          <div class="input-group mb-3">
+            <div class="new-book-section">
+                <h5>Search by Genre:</h5>
+                <div id="addAlert"></div>
+                <input type="text" id="book-name">
+                <button class="btn-primary add-new">Search</button>
+              </div>
+          </div>
+  
+        </div>
+      </div>
+    </div>
+  
+
+  </body>
+</html>
