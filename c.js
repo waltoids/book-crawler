@@ -7,15 +7,15 @@ $(document).ready(function () {
     bookName = $(".search").val().trim();
 
    
-    // AJAX call to the run OpenWeatherMap API for 5 days forecast
-    const queryURL = "";
+    
 
+    const queryURL = "https://www.googleapis.com/books/v1/volumes?q=${bookName}+inauthor:keyes&key=yourAPIKey";
     $.ajax({
         url: queryURL,
         method: "GET"
     }).then(function (data) {
-
-       
+ console.log(data)
+        // GET https://www.googleapis.com/books/v1/volumes?q=flowers+inauthor:keyes&key=yourAPIKey
     })
 
 })
