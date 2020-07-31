@@ -1,6 +1,9 @@
 const express = require("express");
 const exphbs = require("express-handlebars");
 
+// Import routes and give the server access to them.
+const routes = require('');
+
 const PORT = process.env.PORT || 3000;
 
 const app = express();
@@ -15,6 +18,8 @@ app.use(express.json());
 // Handlebars middleware
 app.engine("handlebars", exphbs({ defaultLayout: "main" }));
 app.set("view engine", "handlebars");
+
+app.use(routes);
 
 app.listen(PORT, function() {
     console.log("App now listening at localhost:" + PORT);
