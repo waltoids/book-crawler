@@ -1,9 +1,10 @@
 const express = require("express");
 const exphbs = require("express-handlebars");
+// const routes = require("./routes");
 
 // Import routes and give the server access to them.
-// const routes = require('');
-// require('dotenv').config()
+const routes = require("./routes");
+// require('dotenv').config();
 
 const PORT = process.env.PORT || 8000;
 
@@ -23,25 +24,7 @@ app.engine("handlebars", exphbs({
 
 app.set("view engine", "handlebars");
 
-// app.use(routes);
-app.get('/', (req, res) => {
-  res.render('index', {
-    title: 'Login Page'
-  });
-});
-
-app.get('/register', (req, res) => {
-  res.render('register', {
-    title: 'Registration Page'
-  });
-});
-
-app.get('/search', (req, res) => {
-  res.render('search', {
-    title: 'Book Search Page'
-  });
-});
-
+app.use(routes);
 
 app.listen(PORT, function() {
     console.log("App now listening at localhost:" + PORT);
