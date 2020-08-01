@@ -35,6 +35,12 @@ app.get('/register', (req, res) => {
   });
 });
 
+app.get('/search', (req, res) => {
+  res.render('search', {
+    title: 'Book Search Page'
+  });
+});
+
 
 app.listen(PORT, function() {
     console.log("App now listening at localhost:" + PORT);
