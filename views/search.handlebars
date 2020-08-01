@@ -35,3 +35,18 @@
     <h4>Book(s) Selected</h4>
 
     <div class="bookList">
+
+        {{#each books}}
+
+        <div class="card blue-grey darken-1">
+            <img class="XXXX" src="{{book_image_url}}">
+            <div class="card-content white-text">
+                <span class="card-title">{{book_title}}</span>
+                <p>{{book_summary}}</p>
+                <p>{{book_author}}</p>
+            </div>
+            <div class="card-action">
+                <a href="{{book_preview_url}}">Preview the book</a>
+            </div>
+        </div>
+        {{/each}}
