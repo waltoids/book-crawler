@@ -16,18 +16,20 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
 // Handlebars middleware
-app.engine("handlebars", exphbs({ defaultLayout: "main" }));
+app.engine("handlebars", exphbs({ 
+  defaultLayout: "main"
+ }));
+
 app.set("view engine", "handlebars");
 
 // app.use(routes);
-// login page route
 app.get('/', (req, res) => {
-  res.send("login")
+  res.render('index', {title: 'Login Page'});
+
 })
 
-// registration page route
 app.get('/register', (req, res) => {
-  res.render('register');
+  res.render('register', {title: 'Registration Page'});
 
 })
 
