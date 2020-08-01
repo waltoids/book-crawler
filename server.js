@@ -2,7 +2,7 @@ const express = require("express");
 const exphbs = require("express-handlebars");
 
 // Import routes and give the server access to them.
-const routes = require('');
+// const routes = require('');
 
 const PORT = process.env.PORT || 3000;
 
@@ -19,7 +19,15 @@ app.use(express.json());
 app.engine("handlebars", exphbs({ defaultLayout: "main" }));
 app.set("view engine", "handlebars");
 
-app.use(routes);
+// app.use(routes);
+app.get('/', (req, res) => {
+  res.send("login")
+})
+
+// app.get('/', (req, res) => {
+//   res.send("register")
+// })
+
 
 app.listen(PORT, function() {
     console.log("App now listening at localhost:" + PORT);
