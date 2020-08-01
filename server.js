@@ -24,14 +24,16 @@ app.set("view engine", "handlebars");
 
 // app.use(routes);
 app.get('/', (req, res) => {
-  res.render('index', {title: 'Login Page'});
-
-})
+  res.render('index', {
+    title: 'Login Page'
+  });
+});
 
 app.get('/register', (req, res) => {
-  res.render('register', {title: 'Registration Page'});
-
-})
+  res.render('register', {
+    title: 'Registration Page'
+  });
+});
 
 
 app.listen(PORT, function() {
