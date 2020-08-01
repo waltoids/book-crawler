@@ -20,13 +20,16 @@ app.engine("handlebars", exphbs({ defaultLayout: "main" }));
 app.set("view engine", "handlebars");
 
 // app.use(routes);
+// login page route
 app.get('/', (req, res) => {
   res.send("login")
 })
 
-// app.get('/', (req, res) => {
-//   res.send("register")
-// })
+// registration page route
+app.get('/register', (req, res) => {
+  res.render('register');
+
+})
 
 
 app.listen(PORT, function() {
