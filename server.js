@@ -1,8 +1,9 @@
 const express = require("express");
 const exphbs = require("express-handlebars");
+const db = require("./models");
 
 // Import routes and give the server access to them.
-const routes = require('');
+const routes = require('./routes/user');
 
 const PORT = process.env.PORT || 3000;
 
@@ -21,6 +22,8 @@ app.set("view engine", "handlebars");
 
 app.use(routes);
 
-app.listen(PORT, function() {
-    console.log("App now listening at localhost:" + PORT);
+db.sequelize.sync({ force: true }).then(function() {
+  app.listen(PORT, function() {
+    console.log("App listening on PORT " + PORT);
   });
+});
