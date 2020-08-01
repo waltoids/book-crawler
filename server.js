@@ -4,7 +4,7 @@ const exphbs = require("express-handlebars");
 // Import routes and give the server access to them.
 // const routes = require('');
 
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 8000;
 
 const app = express();
 
