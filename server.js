@@ -3,6 +3,7 @@ const exphbs = require("express-handlebars");
 
 // Import routes and give the server access to them.
 // const routes = require('');
+// require('dotenv').config()
 
 const PORT = process.env.PORT || 8000;
 
