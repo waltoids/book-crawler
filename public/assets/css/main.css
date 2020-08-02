@@ -1,13 +1,69 @@
-body {  
-    background-color: bisque;
-    opacity: 95%;
-    font-family: 'Inter', sans-serif;
-    /* text-align: center; */
-    
-  }
+body {
+  background-color: bisque;
+  opacity: 95%;
+  font-family: "Inter", sans-serif;
+  /* text-align: center; */
+}
 
 .nav-wrapper {
-    background-color: lightgray;
-    box-shadow: 5px 5px 8px gray;
-    text-align: center;
+  background-color: lightgray;
+  /* background-color: teal; */
+  box-shadow: 5px 5px 8px gray;
+  text-align: center;
 }
+
+.booksImg {
+  float: right;
+  /* width: 33.33%;
+  padding: 5px; */
+}
+
+.booksImg2 {
+  position: absolute;
+    /* width: 33.33%; */
+    /* padding: 5px; */
+  }
+  
+
+.loginDiv {
+  clear: both;
+  /* display: table; */
+}
+
+.loginDiv {
+  border: gold solid;
+  margin-left: 350px;
+  margin-right: 350px;
+  padding: 10px;
+  height: 550px;
+  box-shadow: 5px 4px 8px gray;
+  /* background-image: url("assets/images/books.jpeg"); */
+}
+
+#password {
+  box-shadow: 2px 2px 3px gray;
+  border-style: solid gainsboro;
+  border-radius: 7px;
+  border-width: 1px;
+}
+
+#password2 {
+  box-shadow: 2px 2px 3px gray;
+  border-style: solid gainsboro;
+  border-radius: 7px;
+  border-width: 1px;
+}
+#userName {
+  box-shadow: 2px 2px 3px gray;
+  border-style: solid gainsboro;
+  border-radius: 7px;
+  border-width: 1px;
+}
+/* 
+#submit {
+  border-style: solid;
+  border-radius: 7px;
+  border-width: 1px;
+  border-color:gainsboro;
+ background-color: burlywood;
+} */
