@@ -14,16 +14,9 @@ body {
 
 .booksImg {
   float: right;
-  /* width: 33.33%;
-  padding: 5px; */
+   width: 20%;
+  padding: 5px;
 }
-
-.booksImg2 {
-  position: absolute;
-    /* width: 33.33%; */
-    /* padding: 5px; */
-  }
-  
 
 .loginDiv {
   clear: both;
@@ -35,7 +28,7 @@ body {
   margin-left: 350px;
   margin-right: 350px;
   padding: 10px;
-  height: 550px;
+  height: 500px;
   box-shadow: 5px 4px 8px gray;
   /* background-image: url("assets/images/books.jpeg"); */
 }
