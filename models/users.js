@@ -3,6 +3,7 @@ module.exports = function(sequelize, DataTypes) {
         name: {
             type: DataTypes.STRING,
             allowNull: false,
+            unique: true,
             validate: {
                 len: [3,25]
               }
@@ -11,7 +12,7 @@ module.exports = function(sequelize, DataTypes) {
             type: DataTypes.STRING,
             allowNull: false,
             validate: {
-                len: [8,18]
+                len: [1]
             }
         }
     });
