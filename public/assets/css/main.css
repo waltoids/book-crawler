@@ -35,10 +35,9 @@ background-color: #3E799E;
   margin-left: 350px;
   margin-right: 100px;
   padding: 10px;
-  height: 500px;
+  /* height: 500px; */
   box-shadow: 5px 4px 8px gray;
-  /* border: black; */
-  /* background-image: url("assets/images/books.jpeg"); */
+  border: solid grey;
 }
 
 #password {
@@ -47,6 +46,7 @@ background-color: #3E799E;
   border-radius: 7px;
   border-width: 1px;
   color: black;
+  border: solid grey;
 }
 
 #password2 {
@@ -54,12 +54,14 @@ background-color: #3E799E;
   border-style: solid gainsboro;
   border-radius: 7px;
   border-width: 1px;
+  border: solid grey;
 }
 #userName {
   box-shadow: 2px 2px 3px gray;
   border-style: solid black;
   border-radius: 7px;
   border-width: 1px;
+  border: solid grey;
  
 }
 .active {
