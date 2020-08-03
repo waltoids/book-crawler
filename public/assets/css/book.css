@@ -1,0 +1,52 @@
+body {
+  background-color: bisque;
+  opacity: 95%;
+  font-family: "Inter", sans-serif;
+  background-image: url("../images/books3.jpeg");
+}
+
+.main-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.nav-wrapper {
+  background-color: lightgray;
+  /* background-color: teal; */
+  box-shadow: 5px 5px 8px gray;
+  text-align: center;
+}
+
+/* .booksImg {
+  float: right;
+   width: 20%;
+  padding: 5px;
+} */
+
+.loginDiv {
+  clear: both;
+  /* display: table; */
+}
+
+#book-search {
+  box-shadow: 2px 2px 3px gray;
+  border-style: solid gainsboro;
+  border-radius: 7px;
+  border-width: 1px;
+}
+
+#submitBook {
+ /* border: 2px; */
+  /* box-shadow: 2px 2px 3px gray;
+  border-style: solid gainsboro;
+  border-radius: 7px;
+  border-width: 1px; */
+}
+
+.background-img::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background-image: url("../images/books3.jpeg");
+  filter: grayscale(100%);
+}

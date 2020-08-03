@@ -1,6 +1,8 @@
 const express = require("express");
 const routes = express.Router();
 
+// const orm = require("");
+
 // create route for index file 
 routes.get('/', (req, res) => {
     res.render('index', {
@@ -25,4 +27,16 @@ routes.get('/', (req, res) => {
     });
   });
 
+  routes.get("/", function(req, res) {
+    orm.selectAll(function (err, books) {
+      if (err) {
+        return res.status(501).json({
+          message: "Database not found!"
+      })
+    }
+    console.log('Books:', books,)
+    res.render("index", {burger, style:'index'})
+    });
+  });
+  
 module.exports = routes

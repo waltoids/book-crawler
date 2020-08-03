@@ -1,7 +1,8 @@
 body {
-  background-color: bisque;
+  /* background-color: bisque; */
   opacity: 95%;
   font-family: "Inter", sans-serif;
+  background-image: url("../images/books2.jpeg");
   /* text-align: center; */
 }
 
@@ -12,6 +13,11 @@ body {
   text-align: center;
 }
 
+.main-container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
 .booksImg {
   float: right;
    width: 20%;
@@ -24,12 +30,14 @@ body {
 }
 
 .loginDiv {
-  border: gold solid;
+background-color: #3E799E;
+
   margin-left: 350px;
-  margin-right: 350px;
+  margin-right: 100px;
   padding: 10px;
   height: 500px;
   box-shadow: 5px 4px 8px gray;
+  /* border: black; */
   /* background-image: url("assets/images/books.jpeg"); */
 }
 
@@ -38,6 +46,7 @@ body {
   border-style: solid gainsboro;
   border-radius: 7px;
   border-width: 1px;
+  color: black;
 }
 
 #password2 {
@@ -48,9 +57,15 @@ body {
 }
 #userName {
   box-shadow: 2px 2px 3px gray;
-  border-style: solid gainsboro;
+  border-style: solid black;
   border-radius: 7px;
   border-width: 1px;
+ 
+}
+.active {
+color: black;
+font-family: "Inter", sans-serif;
+
 }
 /* 
 #submit {
