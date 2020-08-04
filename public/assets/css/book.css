@@ -2,7 +2,7 @@ body {
   background-color: bisque;
   opacity: 95%;
   font-family: "Inter", sans-serif;
-  /* background-image: url("../images/books2.jpeg"); */
+  background-image: url("../images/library.jpg");
   /* filter: grayscale(70%); */
  
 }
@@ -11,6 +11,27 @@ body {
   max-width: 1200px;
   margin: 0 auto;
 }
+
+h3 {
+background-color: #546e7a ;
+color: aliceblue;
+width: 55%;
+
+}
+
+h4 {
+  background-color: #546e7a ;
+  color: aliceblue;
+  width: 25%;
+}
+
+.searchBar {
+  background-color: #546e7a;
+  color: aliceblue;
+  width: 25%;
+
+}
+
 .nav-wrapper {
   background-color: lightgray;
   /* background-color: teal; */
@@ -26,13 +47,14 @@ body {
 
 .main-container {
   clear: both;
-  /* background-color: #3E799E; */
+ 
 
   /* margin-left: 350px;
   margin-right: 100px; */
   /* padding: 10px;
   height: 500px; */
-  box-shadow: 5px 4px 8px gray;
+  
+  /* box-shadow: 5px 4px 8px gray; */
   
   /* display: table; */
 }
@@ -42,10 +64,14 @@ body {
   border-style: solid gainsboro;
   border-radius: 7px;
   border-width: 1px;
-  border: solid grey;
+  border: solid #546e7a;
+
+
 }
 
 #submitBook {
+ color: oldlace;
+ 
  /* border: 2px; */
   /* box-shadow: 2px 2px 3px gray;
   border-style: solid gainsboro;
@@ -53,10 +79,11 @@ body {
   border-width: 1px; */
 }
 
-.background-img {
+/* .background-img {
    /* background-image: url("../images/reading.jpeg"); */
    /* filter: grayscale(70%); */
-}
+
+   
 .background-img::before {
   content: "";
   position: absolute;
@@ -67,7 +94,12 @@ body {
 }
 
 .books {
- /* background-color: brown; */
  margin-right: 25px;
-/* color: cadetblue; */
+
 }
+
+.input-field label {
+  color: white;
+  width: 25%;
+}
+

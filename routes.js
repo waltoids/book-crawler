@@ -35,7 +35,7 @@ routes.get('/', (req, res) => {
       })
     }
     console.log('Books:', books,)
-    res.render("index", {burger, style:'index'})
+    res.render("index", {books, style:'index'})
     });
   });
   

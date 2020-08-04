@@ -14,13 +14,13 @@ body {
 }
 
 .main-container {
-    max-width: 1200px;
-    margin: 0 auto;
-  }
-  
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
 .booksImg {
   float: right;
-   width: 20%;
+  width: 20%;
   padding: 5px;
 }
 
@@ -30,7 +30,7 @@ body {
 }
 
 .loginDiv {
-background-color: #3E799E;
+  background-color: #3e799e;
 
   margin-left: 350px;
   margin-right: 100px;
@@ -56,18 +56,17 @@ background-color: #3E799E;
   border-width: 1px;
   border: solid grey;
 }
+
 #userName {
   box-shadow: 2px 2px 3px gray;
   border-style: solid black;
   border-radius: 7px;
   border-width: 1px;
   border: solid grey;
- 
 }
 .active {
-color: black;
-font-family: "Inter", sans-serif;
-
+  color: black;
+  font-family: "Inter", sans-serif;
 }
 /* 
 #submit {
@@ -77,3 +76,7 @@ font-family: "Inter", sans-serif;
   border-color:gainsboro;
  background-color: burlywood;
 } */
+#submit {
+    color: white;
+    width: 25%;
+  }
