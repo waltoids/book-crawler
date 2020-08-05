@@ -1,32 +1,81 @@
 const db = require("../models");
 
 module.exports = function(app) {
-    app.get('/', function(req, res) {
 
-    //  res.send('hello world')
-      db.Users.findAll().then(function(dbUser) {
-        // res.json(dbUser);
-        console.log(dbUser);
-        res.json(dbUser);
+  //Login page
+  app.get('/login', function(req, res){
+    res.render('login')
+  });
+
+  //Register page
+  app.get('/register', function(req, res){
+    res.render('register')
+  });
+
+  //Handle registering of users
+  app.post('/register', function(req, res){
+    const { name, password } = req.body
+    let errors =[];
+
+  //Check required fields
+    if(!name || !password) {
+      errors.push({ msg: 'Please fill in all fields' });
+    }
+
+  //Check password length
+    if(password.length < 6){
+      errors.push({ msg: 'Password should be at least 6 characters' });
+    }
+
+    if(errors.length > 0){
+      res.render('register',{
+        errors,
+        name
       })
-      .catch(err => console.log(err))
-    });
-    // add user and password
-    app.get('/add', function(req, res) {
-      const data = {
-        name:'walter',
-        password: '2020'
+    }else {
+      //Validation passed
+      db.Users.findOne({ 
+        where: {
+          name:name
+        }
+       })
+        .then(function(user){
+          if(user) {
+            //User exists
+            errors.push({ msg: 'User is already registered' })
+            res.render('register',{
+              errors,
+              name
+            });
+          } else {
+            db.Users.create({
+              name,
+              password
+            });
+            res.redirect('/login');
+          }
+        });
+    }
+  });
+
+  //Login handler
+  app.post('/login', function(req, res){
+    const { name, password } = req.body
+
+    db.Users.findOne({ 
+      where: {
+        name:name,
+        password:password
       }
+     })
+     .then(function(user){
+       if(user){
+         //user and password matches
+         res.render('dashboard')
+       }else{
+         res.render('login')
+       }
+     })
 
-      let = { name, password } = data;
-
-      //insert into table
-      db.Users.create({
-        name,
-        password
-      })
-      
-      .then(users => res.redirect('/'))
-      .catch(err => console.log(err))
-    });
+  })
 }
