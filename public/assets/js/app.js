@@ -67,29 +67,22 @@ $(document).ready(function () {
                         <div class="row">
                             <div class="input-field col col s4"></div>
                             <div class="card blue-grey darken-1">
-                                <img class="bookImage" src="{{book_url}}" alt="">
                                 <div class="card-content white-text center">
-                                    <span class="card-title">{{book_title}}</span>
-                                    <p>{{book_author}}</p>
-                                    <p>{{book_description}}</p>
-                                    <img class="booksImg" src="{{book_img}}" alt="Three Books with leaves" width="200"
-                                        height="240">
+                                    <span class="card-title">${book_title}</span>
+                                    <p>${book_author}</p>
+                                    <p>${book_description}</p>
+                                    <img class="booksImg" src= $"{book_img.png}" alt=${book_title}>
                                 </div>
                                 <div class="card-action">
-                                    <a href="{{book_url}}">Preview the book</a>
+                                    <a href=  ${book_url}>Preview the book</a>
                                 </div>
                             </div>
-
                         </div>
-
                     </div>
           `));
         }
 
 
-
-
-        
         // * remove '$' and plus sign from variable values
 
         //     for(i=0;i<response.items.length;i++)
@@ -110,23 +103,7 @@ $(document).ready(function () {
     return false;
   });
 
-// create book template 
 
-const booksTemplate = (books) => {
-const bookContainer = $("<div>").attr({
-    class: "books_return"
-});
-
-const img = $("<img>").attr({
-    src: img,
-    alt: ""
-});
-
-// const bookTitle = $("<span>").attr({
-//     class: 
-// });
-
-}
 
 });
 
