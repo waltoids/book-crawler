@@ -5,6 +5,10 @@ const exphbs = require("express-handlebars");
 const routes = require('');
 
 const PORT = process.env.PORT || 3000;
+const routes = require("./routes");
+// require('dotenv').config();
+
+const PORT = process.env.PORT || 8000;
 
 const app = express();
 
@@ -17,6 +21,10 @@ app.use(express.json());
 
 // Handlebars middleware
 app.engine("handlebars", exphbs({ defaultLayout: "main" }));
+app.engine("handlebars", exphbs({ 
+  defaultLayout: "main"
+ }));
+
 app.set("view engine", "handlebars");
 
 app.use(routes);
