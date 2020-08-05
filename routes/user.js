@@ -26,7 +26,7 @@ module.exports = function(app) {
     if(password.length < 6){
       errors.push({ msg: 'Password should be at least 6 characters' });
     }
-
+    
     if(errors.length > 0){
       res.render('register',{
         errors,
@@ -61,7 +61,7 @@ module.exports = function(app) {
   //Login handler
   app.post('/login', function(req, res){
     const { name, password } = req.body
-
+    //finds user based on name and password
     db.Users.findOne({ 
       where: {
         name:name,
