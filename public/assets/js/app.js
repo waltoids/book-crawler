@@ -13,7 +13,7 @@ $(document).ready(function () {
 
     // volume searches can be performed by sending an HTTP GET request to the following URL
 
-    // * search was not defined so I created a variable  for seach in a click function
+    // * search was not defined so I created a variable for seach in a click function
 
     apiKey = "AIzaSyAf-0XFdRGP0OkXktMErBjkhJQKS8evcqE";
     const queryUrl =
@@ -71,7 +71,7 @@ $(document).ready(function () {
                                     <span class="card-title">${book_title}</span>
                                     <p>${book_author}</p>
                                     <p>${book_description}</p>
-                                    <img class="booksImg" src= $"{book_img.png}" alt=${book_title}>
+                                    <img class="booksImg" src= $"{img}" alt=${book_title} width= "120">
                                 </div>
                                 <div class="card-action">
                                     <a href=  ${book_url}>Preview the book</a>
