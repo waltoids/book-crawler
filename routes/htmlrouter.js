@@ -12,7 +12,6 @@ module.exports = function(app) {
     res.sendFile(path.join(__dirname, "../routes/login"));
   });
 
-  
   app.get("/register", function(req, res) {
     res.sendFile(path.join(__dirname, "../routes/register"));
   });

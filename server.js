@@ -2,7 +2,7 @@ const express = require("express");
 const exphbs = require("express-handlebars");
 
 // Import routes and give the server access to them.
-const routes = require('');
+const routes = require('./routes/user.js');
 
 const PORT = process.env.PORT || 3000;
 
