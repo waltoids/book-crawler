@@ -62,7 +62,7 @@ If you have any questions, please contact the GitHub users.
     - Walter Joy IV https://github.com/waltoids
 
 
-<img src="https://github.com/Amina-Seidi">
+<img src="https://avatars2.githubusercontent.com/u/63622254?s=400&u=d41446c5c23fdf209045bedbd3f7812fe0213050&v=4">
 <img src="https://avatars2.githubusercontent.com/u/55069434?v=4">  
 <img src="https://avatars3.githubusercontent.com/u/9420367?s=400&u=4d3ee4ffc2aad2987808da97062780d41ccf89c9&v=4">
 <img src="https://avatars0.githubusercontent.com/u/62120702?s=400&u=0dfd95c4b608648adee88dfc48840f0399da8236&v=4">
