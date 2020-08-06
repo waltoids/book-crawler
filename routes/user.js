@@ -3,23 +3,33 @@ const db = require("../models");
 module.exports = function(app) {
 
   //Login page
-  app.get('/login', function(req, res){
-    res.render('login')
+  app.get('/', function(req, res){
+    res.render('index', {
+      title: 'Login Page',
+      style: 'main'
+    })
   });
 
   //Register page
   app.get('/register', function(req, res){
-    res.render('register')
+    res.render('register', {
+      title: 'Registration Page',
+      style: 'main'
+    });
   });
 
   //Handle registering of users
   app.post('/register', function(req, res){
-    const { name, password } = req.body
+    const { name, password, password2} = req.body
     let errors =[];
 
   //Check required fields
     if(!name || !password) {
       errors.push({ msg: 'Please fill in all fields' });
+    }
+
+    if(password !== password2) {
+      errors.push({ msg: 'Passwords do not match' });
     }
 
   //Check password length
@@ -29,6 +39,8 @@ module.exports = function(app) {
     
     if(errors.length > 0){
       res.render('register',{
+        title: 'Registration Page',
+        style: 'main',
         errors,
         name
       })
@@ -44,6 +56,8 @@ module.exports = function(app) {
             //User exists
             errors.push({ msg: 'User is already registered' })
             res.render('register',{
+              title: 'Registration Page',
+            style: 'main',
               errors,
               name
             });
@@ -52,14 +66,14 @@ module.exports = function(app) {
               name,
               password
             });
-            res.redirect('/login');
+            res.redirect('/');
           }
         });
     }
   });
 
   //Login handler
-  app.post('/login', function(req, res){
+  app.post('/', function(req, res){
     const { name, password } = req.body
     //finds user based on name and password
     db.Users.findOne({ 
@@ -71,9 +85,15 @@ module.exports = function(app) {
      .then(function(user){
        if(user){
          //user and password matches
-         res.render('dashboard')
+         res.render('search', {
+          title: 'Book Search Page',
+          style: 'books'
+        })
        }else{
-         res.render('login')
+         res.render('index', {
+          title: 'Login Page',
+          style: 'main'
+        })
        }
      })
 
