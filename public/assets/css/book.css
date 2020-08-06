@@ -31,11 +31,9 @@ h4 {
 
 .nav-wrapper {
   background-color: lightgray;
-  /* background-color: teal; */
   box-shadow: 5px 5px 8px gray;
   text-align: center;
 }
-
 
 .main-container {
   clear: both;
@@ -54,10 +52,6 @@ h4 {
   color: oldlace;
 }
 
-/* .background-img {
-   /* background-image: url("../images/reading.jpeg"); */
-/* filter: grayscale(70%); */
-
 .background-img::before {
   content: "";
   position: absolute;
@@ -65,8 +59,7 @@ h4 {
   left: 0;
   width: 100%;
   height: 100%;
-  /* background-image: url("../images/books2.jpeg"); */
-  /* filter: grayscale(100%); */
+
 }
 
 .books {
@@ -88,14 +81,6 @@ h4 {
   grid-template-columns: repeat(auto-fill, minmax(230px, 1fr)) ;
   grid-auto-rows: minmax(264px, auto);
   grid-gap: 16px;
-
-  /* padding: 8px;
-  display: grid;
-  margin: 0 auto;
-  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr)) ;
-  grid-auto-rows: minmax(264px, auto);
-  grid-gap: 20px;
-  margin-top: 20px */
 
 }
 

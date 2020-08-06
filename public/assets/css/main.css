@@ -1,14 +1,11 @@
 body {
-  /* background-color: bisque; */
   opacity: 95%;
   font-family: "Inter", sans-serif;
   background-image: url("../images/books2.jpeg");
-  /* text-align: center; */
 }
 
 .nav-wrapper {
   background-color: lightgray;
-  /* background-color: teal; */
   box-shadow: 5px 5px 8px gray;
   text-align: center;
 }
@@ -26,7 +23,6 @@ body {
 
 .loginDiv {
   clear: both;
-  /* display: table; */
 }
 
 .loginDiv {
@@ -35,7 +31,6 @@ body {
   margin-left: 350px;
   margin-right: 100px;
   padding: 10px;
-  /* height: 500px; */
   box-shadow: 5px 4px 8px gray;
   border: solid grey;
 }
@@ -68,14 +63,7 @@ body {
   color: black;
   font-family: "Inter", sans-serif;
 }
-/* 
-#submit {
-  border-style: solid;
-  border-radius: 7px;
-  border-width: 1px;
-  border-color:gainsboro;
- background-color: burlywood;
-} */
+
 #submit {
     color: white;
     width: 25%;
