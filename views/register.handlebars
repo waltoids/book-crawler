@@ -18,6 +18,10 @@
 <h6>Create an Account Here!</h4>
 
 <div class="row">
+      {{#each errors}}
+        <p id="errMsg">{{ msg }}</p>
+      {{/each}}
+      
   <form  class="col s12" action="/register" method="POST">
     <div class="row">
       <div class="input-field col s6">

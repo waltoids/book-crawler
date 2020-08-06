@@ -1,6 +1,5 @@
 <nav>
   <div class="nav-wrapper">
-    {{!-- <img class="booksImg" src="assets/images/reading.jpeg" alt="Three Books with leaves" width="200" height="240"> --}}
     <a href="#!" class="brand-logo">Book Crawler</a>
     <a href="/register" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
     <ul class="right hide-on-med-and-down">
@@ -16,6 +15,9 @@
     <div class="row">
       <form class="col s12" action="/" method="POST">
         <div class="row">
+          {{#each errors}}
+            <p id="errMsg" >{{ msg }}</p>
+          {{/each}}
           <div class="input-field col s6">
             <input type="text" name="name" id="userName" class="validate" placeholder="Enter User Name">
             <label class="active" for="userName">User Name</label>
@@ -34,7 +36,6 @@
             <button type="submit">Login</button>
           </div>
         </div>
-        {{!-- <div class="booksImg2"> <img  src="assets/images/reading.jpeg" alt="Three Books with leaves" width="350" height="250"> </div> --}}
 
       </form>
     </div>
