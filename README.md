@@ -22,16 +22,16 @@
 - Materialize Framework
 
 ## Description: 
-* Create Full-stack Web application using the MVC paradigm and a team's server-side API. The application will be invoked with node server.js in the command-line and will be  deploy using Heroku. 
+* Create a Full-stack Web application using the MVC paradigm and a team's server-side API. The application will be invoked with node server.js in the command-line and will be  deploy using Heroku. 
 
 * The application should be albe to do the following:
-    - Create an acoount or login to view/access books search area
-    - Get back a list of books based on search criteria
+    - Create an acount or login to view/access books search
+    - Get a list of books based on search criteria
     - Get a list of minimum ten books selection
-    - View title, author summary and link for preview 
+    - View book title, author, summary and preview link
 
 * Future improvement:
-    - Create an account to save books and search history user like in order to find them quickly
+    - Create an account to save books and view search history
     - Be able to delete saved books 
 
 ## Table of Content: 
