@@ -1,0 +1,42 @@
+<nav>
+  <div class="nav-wrapper">
+    {{!-- <img class="booksImg" src="assets/images/reading.jpeg" alt="Three Books with leaves" width="200" height="240"> --}}
+    <a href="#!" class="brand-logo">Book Crawler</a>
+    <a href="/register" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+    <ul class="right hide-on-med-and-down">
+      <li><a href="/register">Register</a></li>
+    </ul>
+  </div>
+</nav>
+
+<div class="main-container">
+  <div class="loginDiv">
+    <h3>Login Form</h3>
+
+    <div class="row">
+      <form class="col s12" action="/" method="POST">
+        <div class="row">
+          <div class="input-field col s6">
+            <input type="text" name="name" id="userName" class="validate" placeholder="Enter User Name">
+            <label class="active" for="userName">User Name</label>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="input-field col s6">
+            <input type="password" name="password" id="password" class="validate" placeholder="Enter Password">
+            <label class="active" for="password">Password</label>
+          </div>
+        </div>
+
+        <div class="row">
+          <div id="submit" class="input-field col s4">
+            <button type="submit">Login</button>
+          </div>
+        </div>
+        {{!-- <div class="booksImg2"> <img  src="assets/images/reading.jpeg" alt="Three Books with leaves" width="350" height="250"> </div> --}}
+
+      </form>
+    </div>
+  </div>
+</div>
