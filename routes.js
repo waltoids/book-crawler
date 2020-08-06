@@ -27,16 +27,16 @@ routes.get('/', (req, res) => {
     });
   });
 
-  routes.get("/", function(req, res) {
-    orm.selectAll(function (err, books) {
-      if (err) {
-        return res.status(501).json({
-          message: "Database not found!"
-      })
-    }
-    console.log('Books:', books,)
-    res.render("index", {books, style:'index'})
-    });
-  });
+  // routes.get("/", function(req, res) {
+  //   orm.selectAll(function (err, books) {
+  //     if (err) {
+  //       return res.status(501).json({
+  //         message: "Database not found!"
+  //     })
+  //   }
+  //   console.log('Books:', books,)
+  //   res.render("index", {books, style:'index'})
+  //   });
+  // });
   
 module.exports = routes
