@@ -12,7 +12,7 @@ if(process.env.JAWSDB_URL){
   password: "2020",
   database: ""
   });
-};
+}
 
 // Make connection.
 connection.connect(function(err) {
