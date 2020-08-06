@@ -21,11 +21,13 @@ module.exports = function(app) {
   //Handle registering of users
   app.post('/register', function(req, res){
     const { name, password, password2} = req.body
-    let errors =[];
+    let errors = [];
+    
 
   //Check required fields
-    if(!name || !password) {
+    if(!name || !password || !password2) {
       errors.push({ msg: 'Please fill in all fields' });
+      
     }
 
     if(password !== password2) {
@@ -44,6 +46,7 @@ module.exports = function(app) {
         errors,
         name
       })
+      console.log(errors)
     }else {
       //Validation passed
       db.Users.findOne({ 
@@ -61,6 +64,7 @@ module.exports = function(app) {
               errors,
               name
             });
+            console.log(errors)
           } else {
             db.Users.create({
               name,
@@ -75,6 +79,7 @@ module.exports = function(app) {
   //Login handler
   app.post('/', function(req, res){
     const { name, password } = req.body
+    let errors = [];
     //finds user based on name and password
     db.Users.findOne({ 
       where: {
@@ -90,9 +95,11 @@ module.exports = function(app) {
           style: 'books'
         })
        }else{
-         res.render('index', {
+        errors.push({ msg: 'Incorrect Login!' });
+        res.render('index', {
           title: 'Login Page',
-          style: 'main'
+          style: 'main',
+          errors
         })
        }
      })
