@@ -35,7 +35,6 @@ $(document).ready(function () {
       let img = "";
       let book_title = "";
       let book_author = "";
-      let book_description = "";
       let books = "";
 
       $.ajax({
@@ -55,18 +54,12 @@ $(document).ready(function () {
           console.log("book title:", book_title);
           book_author = books[x].volumeInfo.authors[0];
           console.log("author name:", book_author);
-          book_description = books[x].volumeInfo.description;
-          console.log("description:", book_description);
           img = books[x].volumeInfo.imageLinks.thumbnail;
           console.log("image:", img);
           book_url = books[x].volumeInfo.infoLink;
           console.log("url:", book_url);
-
-
           searchInfo = books[x].searchInfo.textSnippet;
           console.log("searchInfo:", searchInfo);
-
-          searchInfo = 
 
           $(".bookList").append($(`
           <div class="col mr2 books_return">
@@ -77,7 +70,7 @@ $(document).ready(function () {
                                     <span class="card-title">${book_title}</span>
                                     <p>${book_author}</p>
                                     <p>${searchInfo}</p>
-                                    <img class="booksImg" src= $"{img}" alt=${book_title} width= "120">
+                                    <img class="booksImg" src= ${img} alt=${book_title} width= "120">
                                 </div>
                                 <div class="card-action">
                                     <a href=  ${book_url}>Preview the book</a>
