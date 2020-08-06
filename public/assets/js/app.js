@@ -62,6 +62,12 @@ $(document).ready(function () {
           book_url = books[x].volumeInfo.infoLink;
           console.log("url:", book_url);
 
+
+          searchInfo = books[x].searchInfo.textSnippet;
+          console.log("searchInfo:", searchInfo);
+
+          searchInfo = 
+
           $(".bookList").append($(`
           <div class="col mr2 books_return">
                         <div class="row">
@@ -70,7 +76,7 @@ $(document).ready(function () {
                                 <div class="card-content white-text center">
                                     <span class="card-title">${book_title}</span>
                                     <p>${book_author}</p>
-                                    <p>${book_description}</p>
+                                    <p>${searchInfo}</p>
                                     <img class="booksImg" src= $"{img}" alt=${book_title} width= "120">
                                 </div>
                                 <div class="card-action">
