@@ -66,18 +66,17 @@ body {
     border-width: 1px;
     border: solid grey;
   }
+
   .active {
     color: black;
     font-family: "Inter", sans-serif;
   }
-  /* 
-  #submit {
-    border-style: solid;
-    border-radius: 7px;
-    border-width: 1px;
-    border-color:gainsboro;
-   background-color: burlywood;
-  } */
+
+  #errMsg {
+    background-color: crimson;
+    padding-left: 5px;
+  }
+
   #submit {
       color: white;
       width: 25%;
