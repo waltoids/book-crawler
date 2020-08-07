@@ -46,10 +46,13 @@
                                     <p>{{searchInfo}}</p>
                                     <img class="booksImg" src="{{img}}" alt="{{book_title}}">
                                 </div>
-                                
+
+                                {{!-- <img src="{{img_url author.profile_image absolute="true"}}"> --}}
 
                                 <div class="card-action">
-                                    <a href="{{book_url}}">Preview the book</a>
+
+                                    <a href={{book_url}}>Preview the book</a>
+
                                 </div>
                             </div>
 
@@ -57,7 +60,7 @@
 
                     </div>
                     {{/each}}
-            
+
 
                 </div>
 

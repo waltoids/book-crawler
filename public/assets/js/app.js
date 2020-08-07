@@ -73,7 +73,10 @@ $(document).ready(function () {
                                     <img class="booksImg" src= ${img} alt=${book_title} width= "120">
                                 </div>
                                 <div class="card-action">
-                                    <a href=  ${book_url}>Preview the book</a>
+                               
+                                    <a href="${book_url}">Preview the book</a>
+
+                        
                                 </div>
                             </div>
                         </div>
