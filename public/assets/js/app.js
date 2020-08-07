@@ -1,8 +1,4 @@
 $(document).ready(function () {
-  // Variables for parameters
-  //   let bookSearch = $('#book-search')
-  //   const submitBook = $(document).on("click", "#submitBook");
-  // let bookList = $(".bookList");
   let bookSearch = '';
 
   // create on click function to capture book entered data
@@ -26,8 +22,6 @@ $(document).ready(function () {
 
     console.log(queryUrl);
 
-    // $(bookList).submit(function(){
-    //   var search = $('#book-search').val();
     if (bookSearch === '') {
       alert('Please enter something in the field');
     } else {
