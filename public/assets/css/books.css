@@ -2,13 +2,28 @@ body {
     background-color: bisque;
     opacity: 95%;
     font-family: "Inter", sans-serif;
+   position: relative;
+ 
+  }
+  
+  /* use after tag to allow styling only on the image and not the body  */
+  body::after {
+    content: "";
     background-image: url("../images/library.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    /* filter: grayscale(70%); */
+    opacity: 0.7;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    z-index: -1;   
+    height: 100vh;
+    width: 100vw;
   }
-  
+
   .main-container {
     max-width: 1200px;
     margin: 0 auto;
@@ -56,12 +71,9 @@ body {
   #submitBook {
     color: oldlace;
   }
+
   
-  /* .background-img {
-     /* background-image: url("../images/reading.jpeg"); */
-  /* filter: grayscale(70%); */
-  
-  .background-img::before {
+  /* .background-img::before {
     content: "";
     position: absolute;
     top: 10;
@@ -70,7 +82,7 @@ body {
     height: 100%;
     /* background-image: url("../images/books2.jpeg"); */
     /* filter: grayscale(100%); */
-  }
+  } */
   
   .books {
     margin-right: 25px;

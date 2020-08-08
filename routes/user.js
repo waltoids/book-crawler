@@ -1,5 +1,6 @@
 const db = require("../models");
 
+// add request to route
 const request = require("request");
 
 module.exports = function (app) {
@@ -121,7 +122,16 @@ module.exports = function (app) {
 
       console.log(Array.isArray(body.items))
 
-      console.log(body.items[0]);
+      console.log("item array:", body.items[0]);
+
+      console.log("item selection:", body.items[0].searchInfo.textSnippet);
+
+      console.log("title:", body.items[0].volumeInfo.title);
+
+      console.log("image:", body.items[0].volumeInfo.imageLinks.thumbnail);
+
+    
+      // saleInfo.searchInfo.textSnippet
 
       // render on data on search page
       res.render("search", {
