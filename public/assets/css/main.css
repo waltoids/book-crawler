@@ -28,16 +28,10 @@ body {
   
   .loginDiv {
     clear: both;
-    /* display: table; */
-  }
-  
-  .loginDiv {
-    background-color: #3e799e;
-  
+    background-color: #3E799E;
     margin-left: 350px;
-    margin-right: 100px;
+    margin-right: 250px;
     padding: 10px;
-    /* height: 500px; */
     box-shadow: 5px 4px 8px gray;
     border: solid grey;
   }

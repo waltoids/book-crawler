@@ -28,14 +28,13 @@
             </div>
             <h4>Book Selection:</h4>
             <div class="5">
-                <div class="row bookList">
-                    {{#each books}}
-                        <div class="col mr3 books_return">
+                <div class="row">
+                    <div class="col mr3 books_return">
                             <div class="row">
                                 <div class="input-field col col s4"></div>
                                 <div class="card blue-grey darken-1">
                                     <div class="card-content white-text center">
-                                        <span class="card-title">{{book_title}}</span>
+                                        <span class="card-title">{{volumeInfo.title}}</span>
                                         <p>{{book_author}}</p>
                                         <p>{{searchInfo}}</p>
                                         <img class="booksImg" src="{{img}}" alt="{{book_title}}">
@@ -46,7 +45,10 @@
                                 </div>
                             </div>
                         </div>
-                    {{/each}}
+                        {{#each books}}
+                        <p>{{ volumeInfo }}</p>
+                        {{/each}}
+                    
                 </div>
             </div>
     </div>

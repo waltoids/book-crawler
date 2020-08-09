@@ -1,4 +1,5 @@
 const db = require('../models');
+const books = require('../public/assets/js/app');
 
 module.exports = function(app) {
 
@@ -97,7 +98,8 @@ module.exports = function(app) {
           res.render('index', {
             title: 'Login Page',
             style: 'main',
-            errors
+            errors,
+            books
           });
         }
       });
