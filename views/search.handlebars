@@ -40,12 +40,11 @@
                                 {{!-- loop through book summary --}}
                                 <p>{{this.searchInfo.textSnippet}}</p>
 
-                                {{!-- loop through images --}}
-                                {{!-- {{#each volumeInfo.imageLinks.smallThumbnail}}
-                                <img class="booksImg" src={{smallThumbnail}} alt="{{}}">
-                                  {{/each}} --}}
-
-
+                                {{!-- loop through images and remove 'alt' attribute--}}
+                                <img class="booksImg" src="{{volumeInfo.imageLinks.smallThumbnail}}">
+                            </div>
+                            <div class="card-action">
+                                <a href={{volumeInfo.previewLink}}>Preview the book</a>
                             </div>
                         </div>
                     </div>
@@ -62,7 +61,12 @@
 
 
 {{!-- loop through image links --}}
-</div>
+{{!-- </div>
 <div class="card-action">
 
-    <a href="{{this.volumeInfo.imageLinks.thumbnail}}">Preview the book</a> --}}
+    <a href="{{this.volumeInfo.imageLinks.thumbnail}}">Preview the book</a> --}} --}}
+
+{{!-- loop through images --}}
+{{!-- {{#each volumeInfo.imageLinks.smallThumbnail}}
+                                <img class="booksImg" src={{smallThumbnail}} alt="{{}}">
+                                  {{/each}} --}}
