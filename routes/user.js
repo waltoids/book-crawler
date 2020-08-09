@@ -124,15 +124,6 @@ module.exports = function (app) {
 
       console.log("item array:", body.items[0]);
 
-      console.log("item selection:", body.items[0].searchInfo.textSnippet);
-
-      console.log("title:", body.items[0].volumeInfo.title);
-
-      console.log("image:", body.items[0].volumeInfo.imageLinks.thumbnail);
-
-    
-      // saleInfo.searchInfo.textSnippet
-
       // render on data on search page
       res.render("search", {
         books: body.items,
