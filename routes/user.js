@@ -1,48 +1,48 @@
-const db = require("../models");
+const db = require('../models');
 
 // add request to route
-const request = require("request");
+const request = require('request');
 
 module.exports = function (app) {
   //Login page
-  app.get("/", function (req, res) {
-    res.render("index", {
-      title: "Login Page",
-      style: "main",
+  app.get('/', function (req, res) {
+    res.render('index', {
+      title: 'Login Page',
+      style: 'main',
     });
   });
 
   //Register page
-  app.get("/register", function (req, res) {
-    res.render("register", {
-      title: "Registration Page",
-      style: "main",
+  app.get('/register', function (req, res) {
+    res.render('register', {
+      title: 'Registration Page',
+      style: 'main',
     });
   });
 
   //Handle registering of users
-  app.post("/register", function (req, res) {
+  app.post('/register', function (req, res) {
     const { name, password, password2 } = req.body;
     let errors = [];
 
     //Check required fields
     if (!name || !password || !password2) {
-      errors.push({ msg: "Please fill in all fields" });
+      errors.push({ msg: 'Please fill in all fields' });
     }
 
     if (password !== password2) {
-      errors.push({ msg: "Passwords do not match" });
+      errors.push({ msg: 'Passwords do not match' });
     }
 
     //Check password length
     if (password.length < 6) {
-      errors.push({ msg: "Password should be at least 6 characters" });
+      errors.push({ msg: 'Password should be at least 6 characters' });
     }
 
     if (errors.length > 0) {
-      res.render("register", {
-        title: "Registration Page",
-        style: "main",
+      res.render('register', {
+        title: 'Registration Page',
+        style: 'main',
         errors,
         name,
       });
@@ -56,10 +56,10 @@ module.exports = function (app) {
       }).then(function (user) {
         if (user) {
           //User exists
-          errors.push({ msg: "User is already registered" });
-          res.render("register", {
-            title: "Registration Page",
-            style: "main",
+          errors.push({ msg: 'User is already registered' });
+          res.render('register', {
+            title: 'Registration Page',
+            style: 'main',
             errors,
             name,
           });
@@ -69,14 +69,14 @@ module.exports = function (app) {
             name,
             password,
           });
-          res.redirect("/");
+          res.redirect('/');
         }
       });
     }
   });
 
   //Login handler
-  app.post("/", function (req, res) {
+  app.post('/', function (req, res) {
     const { name, password } = req.body;
     let errors = [];
     //finds user based on name and password
@@ -88,28 +88,28 @@ module.exports = function (app) {
     }).then(function (user) {
       if (user) {
         //user and password matches
-        res.render("search", {
-          title: "Book Search Page",
-          style: "books",
+        res.render('search', {
+          title: 'Book Search Page',
+          style: 'books',
         });
       } else {
-        errors.push({ msg: "Incorrect Login!" });
-        res.render("index", {
-          title: "Login Page",
-          style: "main",
+        errors.push({ msg: 'Incorrect Login!' });
+        res.render('index', {
+          title: 'Login Page',
+          style: 'main',
           errors,
         });
       }
     });
   });
 
-  // get book search page using ajax call 
-  app.get("/books/:bookSearch", function (req, res) {
-    // use to store search parameter 
+  // get book search page using ajax call
+  app.get('/books/:bookSearch', function (req, res) {
+    // use to store search parameter
     const bookSearch = req.params.bookSearch;
 
-    const apiKey = "AIzaSyAf-0XFdRGP0OkXktMErBjkhJQKS8evcqE";
-    const queryUrl = "https://www.googleapis.com/books/v1/volumes?q="+bookSearch +"&key=" +apiKey;
+    const apiKey = 'AIzaSyAf-0XFdRGP0OkXktMErBjkhJQKS8evcqE';
+    const queryUrl = 'https://www.googleapis.com/books/v1/volumes?q='+bookSearch +'&key=' +apiKey;
 
     // capture and store data in json format
     request(queryUrl, { json: true }, (error, response, body) => {
@@ -120,15 +120,15 @@ module.exports = function (app) {
 
       console.log(Object.keys(body));
 
-      console.log(Array.isArray(body.items))
+      console.log(Array.isArray(body.items));
 
-      console.log("item array:", body.items[0]);
+      console.log('item array:', body.items[0]);
 
       // render on data on search page
-      res.render("search", {
+      res.render('search', {
         books: body.items,
-        title: "search",
-        style: "books",
+        title: 'search',
+        style: 'books',
       }
       );
     });
