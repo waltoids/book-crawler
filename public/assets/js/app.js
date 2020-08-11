@@ -1,12 +1,12 @@
 $(document).ready(function () {
-  let bookSearch = "";
+  let bookSearch = '';
 
   // create on click function to capture book entered data
-  $("#submitBook").on("click", function (event) {
+  $('#submitBook').on('click', function (event) {
     event.preventDefault();
-    bookSearch = $("#book-search").val().trim();
+    bookSearch = $('#book-search').val().trim();
     // make link to search page
-    window.location.href = "/books/" + bookSearch;
+    window.location.href = '/books/' + bookSearch;
 
     console.log(bookSearch);
   });
