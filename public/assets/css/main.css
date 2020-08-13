@@ -1,23 +1,22 @@
 body {
-    /* background-color: bisque; */
     opacity: 95%;
     font-family: "Inter", sans-serif;
     background-image: url("../images/books2.jpeg");
     background-position: center;
     background-size: cover;
-    /* text-align: center; */
+    text-align: center;
   }
   
   .nav-wrapper {
     background-color: lightgray;
-    /* background-color: teal; */
     box-shadow: 5px 5px 8px gray;
     text-align: center;
+    position: relative;
   }
   
   .main-container {
-    max-width: 1200px;
-    margin: 0 auto;
+    margin: auto;
+    width: 75%;
   }
   
   .booksImg {
@@ -26,18 +25,10 @@ body {
     padding: 5px;
   }
   
-  .loginDiv {
-    clear: both;
-    /* display: table; */
-  }
   
   .loginDiv {
     background-color: #3e799e;
-  
-    margin-left: 350px;
-    margin-right: 100px;
     padding: 10px;
-    /* height: 500px; */
     box-shadow: 5px 4px 8px gray;
     border: solid grey;
   }
